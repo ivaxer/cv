@@ -23,17 +23,18 @@
 
 %FONTS
 \defaultfontfeatures{Mapping=tex-text}
-%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%\setmainfont{PT Sans}
-\setmainfont{Ubuntu}
+\setsansfont{Myriad Pro}
+\setmainfont{Minion Pro}
 
 
 %CV Sections inspired by:
 %http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}
+ {\Large\sffamily\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
 
-\titleformat{\subsection}{\large\scshape\raggedright}{}{0em}{}
+\titleformat
+  {\subsection}{\large\sffamily\raggedright}{}{0em}{}
 \titlespacing{\subsection}{0pt}{3pt}{3pt}
 %Tweak a bit the top margin
 %\addtolength{\voffset}{-1.3cm}
@@ -53,11 +54,10 @@
 \section{Personal Data}
 
 \begin{tabular}{rl}
-    \textsc{Date of Birth:} & 08 January 1989\\
-    \textsc{Residence:}   & Moscow, Russia\\
-    \textsc{Phone:}     & +7 925 1529926\\
-    \textsc{email:}     & \href{mailto:ivaxer@gmail.com}{ivaxer@gmail.com} \\
-    \textsc{LinkedIn profile:} & \href{http://www.linkedin.com/in/ivaxer}{ivaxer}
+    Residence:   & Moscow, Russia\\
+    Phone:     & +7 925 1529926\\
+    Email:     & \href{mailto:ivaxer@gmail.com}{ivaxer@gmail.com} \\
+    Networks: & \href{http://www.linkedin.com/in/ivaxer}{LinkedIn}, \href{https://github.com/ivaxer}{GitHub}
 \end{tabular}
 
 
@@ -150,8 +150,8 @@ a WSGI application.
 
 \section{Education}
 \begin{tabular}{rl}
-2006 --- 2011& M.S. in \textsc{Computer Science} and \textsc{Information
-Technologies} \\& \textbf{Saratov State University}
+2006 --- 2011& M.S. in Computer Science and Information
+Technologies \\& \textbf{Saratov State University}
 \end{tabular}
 
 
