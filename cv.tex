@@ -63,106 +63,33 @@
 
 \section{Areas of interests}
 \begin{itemize}
-\item Scalable systems
+\item Distributed systems
 \item Data storages
-\item Modern programming languages
+\item Linux
 \end{itemize}
 
 
 \section{Work Experience}
-\subsection{Lead Software Developer at Under Development (undev.ru), October 2011 --- Present}
-I work with team which develop platform for video processing, streaming
-and storage. We use Linux, Objective-C, C, C++, Python and Go in our platform.
-The most part I work at low level (C, network I/O (libev), disk I/O). The main
-public projects which I've participated:
-\begin{itemize}
-\item CCTV of Russian presidential election in 2012 --- country-wide streaming
-and storage webcasts from 200,000 webcams.
-\item Internet and local video broadcasting of SPIEF 2012.
-\end{itemize}
+\subsection{Lead Software Developer at Undev/NPTV (undev.ru/nptv.com), October 2011 --- Present}
+I work in video backend department which develop platform for video processing, streaming and storage.
+
+I've participated team, that develop framework in C/C++/Objective-C for building video services: streaming services (HLS, RTMP, MPEG-TS, etc.), transcoding, video capturing. I've added initial HLS support, video recording, playback, contributed to RTMP subsystem, framework core, network and disk i/o subsystems.
+
+Currently I work on petabyte scale distributed storage for archiving video streams. It written in Go. Storage provides video specific API: timestamp index, reducing replication factor of old records or auto removing.
+
+This building blocks are used in different projects. Largest of them are video broadcasting of president elections in 2012 in Russia (capturing video from 200 000 webcams, streaming and storage), recording of Unified State Exam in Russian schools, NPTV cloud.
+
 \subsection{Software Developer at Saratov State University, PRCNIT, July 2008 ---
 October 2011}
-PRCNIT (Povolzhsky Regional Centre of New Information Technologies) is a division
-of Saratov State University, which operates in the IT-sphere. I worked in the
-network and telecomunication systems department, which mainly deals with
-the developing of University infrastructure and testing of new technologies. Among
-my responsibilities were:
-\begin{itemize}
-\item VoIP telephony development. I have worked on VoIP telephony design and
-development for the University. When I joined the University the telephony included
-three analog PBXes (three buildings were covered) connected via Asterisks (IAX2),
-one PBX was connected to PSTN gateway via E1. Now the telephony system is based on
-SIP protocol with OpenSIPS as registrars and proxis, FreeRADIUS as OpenSIPS
-backend for AAA and Asterisk as gateways to legacy analog PBXes. The telephony
-system scales for the University requirements, it is easy manageable, fault tolerant.
-\item Infrastructure management software creation. Here are some pieces of
-software that I've written:
- \begin{itemize}
- \item Column based storage in Scala for storing netflow data
-(\href{http://github.com/ivaxer/cbs}{source code}). The project is still at an
-early stage but first results show decrease in disk space usage by 30\%. It's
-planned 50-60\% after the all features are implemented.
- \item virt-platform --- lightweight platform for creating private clouds
-(\href{http://git.sgu.ru/?p=virt-platform.git;a=summary}{source code}).
-The platform is based on libvirt. It's designed to extend libvirt
-while maintaining its flexibility, support several storage backends (it currently
-supports only DRBD, Ceph\slash RBD is planned).
- \item Software for provisioning Linksys SPA SIP-phones
-(\href{http://git.sgu.ru/?p=spaconf.git;a=summary}{source code}). Spaconf is
-implemented as a WSGI application that receives phone's
-parameters from an internal database, generates phone config as described in
-specification from Linksys, crypts and sends config back to the phone.  Spaconf
-was deployed to production two years ago.
- \item Module for FreeRADIUS in Python, which works as AAA backend for HP
-procurve switches (\href{http://git.sgu.ru/?p=aaa\_hp.git;a=summary}{source
-code}).
- \item Dozens scripts in Python for automation, data processing and monitoring.
- \end{itemize}
-\item Testing and introducing new technologies and infrastructure. Open source
-technologies that I implemented included RPM build system (extended Plague to
-support the packages building directly from GIT repository), GIT hosting
-(gitosis), Hudson(Jenkins) CI.
-\item Refactoring, improvement of performance, localizing memory leaks in open
-source software that we use (OpenSIPS, Asterisk, rdiff-backup and PRCNIT's
-software).
-\end{itemize}
+PRCNIT (Povolzhsky Regional Centre of New Information Technologies) is IT division of Saratov State University. I worked in the network and telecommunication systems department, which mainly deals with the developing of University infrastructure and testing of new technologies. I've participated in the design and development of OpenSIPS/Asterisk-based VoIP telephony.
 
 \subsection{VoIP-platform Developer at TipMeet, April 2010 --- Present}
-TipMeet is a startup that provides paid lines. I develop
-a communication platform. The platform is built of the following components:
-OpenSIPS, MediaProxy, FreeSWITCH, SIP B2BUA based on Sippy and
-tippresence.\\
-At TipMeet I have:
-\begin{itemize}
-\item performed a part of work on the design of the communication platform.
-\item developed a presence server
-(\href{http://github.com/tipmeet/tippresence}{source code}) with SIP\slash
-HTTP\slash AMQP interfaces on Twisted\slash Python. As a part of the project
-I've developed a simple SIP-stack (incomplete implementation of RFC3261)
-(\href{http://github.com/tipmeet/tipsip}{source code}) on
-Twisted. The presence server is used in production now.
-\item developed routing logic for OpenSIPS and internal RESTful API
-to connect OpenSIPS to the project database. The RESTful API is implemented as
-a WSGI application.
-\item assisted with bugs fixing in the complex multicomponent system.
-\end{itemize}
-
+TipMeet is a startup that provides paid lines. I developed a communication platform. The platform is built of the following components: OpenSIPS, MediaProxy, FreeSWITCH, SIP B2BUA based on Sippy and tippresence.
 
 \section{Education}
 \begin{tabular}{rl}
 2006 --- 2011& M.S. in Computer Science and Information
 Technologies \\& \textbf{Saratov State University}
 \end{tabular}
-
-
-\section{Related activity\slash industry participation}
-\begin{itemize}
-\item OpenSIPS community member, source code contributor and maintainer in
-Fedora/RHEL repositories.
-\item Google Summer of Code 2010 program participant within Asterisk project.
-\item Member of Fedora project.
-\item Developer of software package for modeling the atomic structures on the
-computer clusters using MPI technology.
-\end{itemize}
 
 \end{document}
