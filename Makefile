@@ -9,4 +9,4 @@ release: cv.tex
 	xelatex cv.tex
 
 clean:
-	rm *.log *.out *.aux *.pdf
+	rm -f *.log *.out *.aux *.pdf
