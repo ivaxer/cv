@@ -1,12 +1,12 @@
 .PHONY: all
-all: cv.pdf
+all: JohnKhvatov.pdf
 
-cv.pdf: cv.tex
-	xelatex cv.tex
+JohnKhvatov.pdf: JohnKhvatov.tex
+	xelatex JohnKhvatov.tex
 
-release: cv.tex
-	xelatex cv.tex
-	xelatex cv.tex
+release: JohnKhvatov.tex
+	xelatex JohnKhvatov.tex
+	xelatex JohnKhvatov.tex
 
 clean:
 	rm -f *.log *.out *.aux *.pdf
